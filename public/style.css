@@ -1,0 +1,246 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #ffffff, #0072ff);
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.location-section, .continent-section {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 15px; /* Aumentado el padding para una apariencia más robusta */
+  border: 2px solid #ddd; /* Agregado borde para mejor visibilidad */
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 1.1em; /* Aumentado el tamaño de fuente */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+button.btn-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.weather-icon img {
+  width: 100px;
+  height: 100px;
+}
+
+.weather-details {
+  text-align: left;
+  flex: 1;
+  min-width: 200px;
+}
+
+.weather-details p {
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.weather-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.weather-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ui-autocomplete {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.ui-menu-item {
+  padding: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.ui-menu-item:hover {
+  background-color: #0072ff;
+  color: #ffffff;
+}
+
+.location-display {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Evita la selección de texto y la aparición del cursor en los elementos de texto */
+.no-select {
+  user-select: none; /* Deshabilita la selección de texto */
+  pointer-events: none; /* Deshabilita los eventos del puntero */
+}
+
+/* Ajusta los estilos específicos si es necesario */
+.weather-details p, .location-display {
+  cursor: default; /* Cambia el cursor a "default" */
+  user-select: none; /* Deshabilita la selección de texto */
+  pointer-events: none; /* Deshabilita los eventos del puntero */
+}
+
+/* Login and Register Forms */
+form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="submit"], button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 80px; /* Ajusta el ancho según tu necesidad */
+  height: auto; }
+

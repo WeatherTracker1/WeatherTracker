@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Weather Tracker</title>
+    <link rel="stylesheet" href="style.css"> <!-- Vincula el archivo de estilo -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Vincula Bootstrap -->
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-3 position-relative">
+        <div class="container">
+            <img src="wtlogo.png" alt="Weather Tracker Logo" class="logo" style="width: 100px;">
+            <div class="col">
+                <h1 class="title">The Weather Tracker</h1> <!-- Añadido una clase al título -->
+            </div>
+        </div>
+    </header>
+    <main class="container d-flex justify-content-center align-items-center ">
+        <div>
+            <section class="location-section mt-5">
+                <label for="locationInput" class="no-select">Ingrese la ubicación:</label>
+                <div class="input-group">
+                    <input type="text" id="locationInput" name="location" aria-label="Ubicación" class="form-control">
+                    <button id="search" class="btn btn-primary">Buscar</button>
+                </div>
+            </section>
+            <section class="weather-info hidden">
+                <div id="location-display" class="location-display no-select"></div>
+                <div class="weather-icon">
+                    <img id="weatherIcon" src="" alt="Icono del clima" class="hidden">
+                </div>
+                <div class="weather-details">
+                    <p class="no-select"><strong>Temperatura:</strong> <span id="temperature">--</span></p>
+                    <p class="no-select"><strong>Estado:</strong> <span id="weather-condition">--</span></p>
+                    <p class="no-select"><strong>Máxima:</strong> <span id="max-temperature">--</span></p>
+                    <p class="no-select"><strong>Mínima:</strong> <span id="min-temperature">--</span></p>
+                    <p class="no-select"><strong>Probabilidad de Precipitaciones:</strong> <span id="precipitation-probability">--</span></p>
+                </div>
+            </section>
+            <div id="loader" class="loader hidden"></div>
+            <section class="continent-section mt-5">
+                <h2 class="no-select">Principales países del mundo</h2>
+                <label for="continent-select" class="no-select">Selecciona un continente:</label>
+                <select id="continent-select" aria-label="Selecciona un continente" class="form-control">
+                    <option value="america">América</option>
+                    <option value="europa">Europa</option>
+                    <option value="asia">Asia</option>
+                    <option value="africa">África</option>
+                    <option value="oceania">Oceanía</option>
+                </select>
+                <div id="weather-container" class="weather-container mt-3"></div>
+            </section>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+    <script src="continentes.js"></script>
+</body>
+</html>
